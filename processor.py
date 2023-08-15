@@ -9,14 +9,7 @@ import numpy as np
 from transformers import pipeline , AutoProcessor
 from transformers import Wav2Vec2ForCTC, Wav2Vec2Tokenizer
 
-# pip3 install pyctcdecode
-# pip3 install kenlm
-
-# pipe = pipeline("automatic-speech-recognition", model="ihanif/whisper-medium-urdu")
-pipe = pipeline("automatic-speech-recognition", model="kingabzpro/wav2vec2-large-xls-r-300m-Urdu")
-# model_name = 'ihanif/whisper-medium-urdu'
-# model = Wav2Vec2ForCTC.from_pretrained(model_name)
-# tokenizer = Wav2Vec2Tokenizer.from_pretrained(model_name)
+pipe = pipeline("automatic-speech-recognition", model="codenamewei/speech-to-text")
 
 ctx = zmq.asyncio.Context()
 socket = ctx.socket(zmq.PULL)
