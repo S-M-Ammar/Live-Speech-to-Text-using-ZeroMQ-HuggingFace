@@ -19,7 +19,7 @@ initial_frame = True
 print("Recording in progress")
 
 while True:
-    audio_chunk = stream.read(30000)  # Adjust chunk size as needed
+    audio_chunk = stream.read(10000 , exception_on_overflow=False)  # Adjust chunk size as needed
     single_frame = np.frombuffer(audio_chunk, dtype=np.int16)
     if(initial_frame):
         initial_frame = False
